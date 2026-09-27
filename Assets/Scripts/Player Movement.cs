@@ -65,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Physics.Linecast(new Vector3((transform.position.x - WallStickDistance), transform.position.y), new Vector3((transform.position.x + WallStickDistance), transform.position.y), out RaycastHit hit, LayerHit))
             {
+                
                 if (hit.transform.position.x < transform.position.x)
                 {
                     Debug.Log("Wall hit to left");
