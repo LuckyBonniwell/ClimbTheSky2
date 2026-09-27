@@ -1,14 +1,15 @@
 using UnityEngine;
 
+
 public class Timeswap : MonoBehaviour
 {
-    public static bool IsDay = true;
+    public static bool IsDay = false; // Is set to true immediately to avoid any annoying BS
     private bool Annoyance;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        Sundial();
     }
 
     // Update is called once per frame
