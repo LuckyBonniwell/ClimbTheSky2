@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (!Timeswap.IsDay)
         {
-            if (Physics.Linecast(new Vector3((transform.position.x - WallStickDistance), transform.position.y), new Vector3((transform.position.x + WallStickDistance), transform.position.y), out RaycastHit hit, LayerHit))
+            /*if (Physics.Linecast(new Vector3((transform.position.x - WallStickDistance), transform.position.y), new Vector3((transform.position.x + WallStickDistance), transform.position.y), out RaycastHit hit, LayerHit))
             {
                 
                 if (hit.transform.position.x < transform.position.x)
