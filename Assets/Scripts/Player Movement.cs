@@ -78,6 +78,22 @@ public class PlayerMovement : MonoBehaviour
                 }
                 Debug.Log("Linecast hit");
                 MovementState = 3;
+            }*/
+            
+            Ray RonaldRaygun = new Ray(gameObject.transform.position, new Vector3(1, 0, 0));
+            if (Physics.Raycast(RonaldRaygun, WallStickDistance, LayerHit))
+            {
+                Debug.Log("Raycast hit");
+                WallDirectionality = 1;
+                MovementState = 3;
+            }
+            
+            Ray Rayman = new Ray(gameObject.transform.position, new Vector3(-1, 0, 0));
+            if (Physics.Raycast(Rayman, WallStickDistance, LayerHit))
+            {
+                Debug.Log("Raycast hit");
+                WallDirectionality = -1;
+                MovementState = 3;
             }
         }
     }
