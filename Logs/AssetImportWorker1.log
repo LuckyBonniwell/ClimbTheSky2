@@ -1,11 +1,11 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.4/staging' branch; Version is '6000.4.1f1 (8535861f39e1) revision 8729990'; Using compiler version '194234433'; Build Type 'Release'
 OS: 'Windows 11  (10.0.26200) Core' Language: 'en' Physical Memory: 32486 MB
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-7N2q-z97xVxiJNXB5Z_X4" at "2026-09-27T15:31:33.1145696Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-7N2q-z97xVxiJNXB5Z_X4" at "2026-09-27T17:01:53.3492138Z"
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-09-27T15:31:33Z
+Date: 2026-09-27T17:01:53Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.4.1f1\Editor\Unity.exe
@@ -19,7 +19,7 @@ C:/Users/rtayl/OneDrive/Documents/GitHub/ClimbTheSky2
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-51351
+64338
 -licensingIpc
 LicenseClient-7N2q-z97xVxiJNXB5Z_X4
 -force-d3d12
@@ -68,12 +68,12 @@ C:/Users/rtayl/OneDrive/Documents/GitHub/ClimbTheSky2
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [20496]  Target information:
+Player connection [28240]  Target information:
 
-Player connection [20496]  * "[IP] 10.0.0.116 [Port] 0 [Flags] 2 [Guid] 318245023 [EditorId] 318245023 [Version] 1048832 [Id] WindowsEditor(7,Onyx) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [28240]  * "[IP] 10.0.0.116 [Port] 0 [Flags] 2 [Guid] 1075497022 [EditorId] 1075497022 [Version] 1048832 [Id] WindowsEditor(7,Onyx) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [20496] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [20496] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [28240] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [28240] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 15
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -102,7 +102,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56584
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56944
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
 [Licensing::Client] Error: HandshakeResponse reported an error:
@@ -110,10 +110,10 @@ Begin MonoManager ReloadAssembly
 	ResponseStatus: Unsupported protocol version '1.18.1'.
 [Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-7N2q-z97xVxiJNXB5Z_X4"
 [Licensing::IpcConnector] LicenseClient-7N2q-z97xVxiJNXB5Z_X4 channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-rtayl-6000.4.1" at "2026-09-27T15:31:33.7532982Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-rtayl-6000.4.1" at "2026-09-27T17:01:53.9940211Z"
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001176 seconds.
+Registered in 0.001258 seconds.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
@@ -121,23 +121,23 @@ Package Manager log level set to [2]
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.256 seconds
-Domain Reload Profiling: 545ms
-	BeginReloadAssembly (84ms)
-	RebuildCommonClasses (24ms)
-	RebuildNativeTypeToScriptingClass (8ms)
+- Finished resetting the current domain, in  0.266 seconds
+Domain Reload Profiling: 563ms
+	BeginReloadAssembly (82ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (9ms)
 	initialDomainReloadingComplete (43ms)
-	LoadAllAssembliesAndSetupDomain (128ms)
-		LoadAssemblies (81ms)
-		AnalyzeDomain (122ms)
-			TypeCache.Refresh (121ms)
-				TypeCache.ScanAssembly (112ms)
-	FinalizeReload (257ms)
+	LoadAllAssembliesAndSetupDomain (137ms)
+		LoadAssemblies (80ms)
+		AnalyzeDomain (131ms)
+			TypeCache.Refresh (129ms)
+				TypeCache.ScanAssembly (120ms)
+	FinalizeReload (267ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (31ms)
-			BeforeProcessingInitializeOnLoad (56ms)
-			ProcessInitializeOnLoadAttributes (73ms)
-			ProcessInitializeOnLoadMethodAttributes (55ms)
+			InitializePlatformSupportModulesInManaged (33ms)
+			BeforeProcessingInitializeOnLoad (58ms)
+			ProcessInitializeOnLoadAttributes (74ms)
+			ProcessInitializeOnLoadMethodAttributes (58ms)
 ========================================================================
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
@@ -145,14 +145,14 @@ Begin MonoManager ReloadAssembly
 [Licensing::Module] Licensing is not yet initialized.
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.1+9fbee8e
-  Session Id:              35e403e99f764229a25041fa78c8d1dd
-  Correlation Id:          deab7ce34547a952e2bd70e137789fa1
-  External correlation Id: 3675582154586753153
+  Session Id:              59c0c4fefe424c388e2a56d479db22a6
+  Correlation Id:          ed939bee333c32dbd709a285bab9d958
+  External correlation Id: 4475253869193808156
   Machine Id:              I4jEhnL+NkHjBY0+fmhPJQt22q4=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-rtayl-6000.4.1" (connect: 0.00s, validation: 0.00s, handshake: 0.60s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-rtayl-6000.4.1-notifications" at "2026-09-27T15:31:34.3557856Z"
-[Licensing::Module] Licensing Background thread has ended after 1.24s
-[Licensing::Module] Licensing is initialized (took 0.12s).
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-rtayl-6000.4.1" (connect: 0.00s, validation: 0.00s, handshake: 0.61s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-rtayl-6000.4.1-notifications" at "2026-09-27T17:01:54.6134286Z"
+[Licensing::Module] Licensing Background thread has ended after 1.26s
+[Licensing::Module] Licensing is initialized (took 0.08s).
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
   Id: 1375835698956-UnityPersXXXX
@@ -170,77 +170,37 @@ Native extension for WindowsStandalone target not found
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.234 seconds
-Domain Reload Profiling: 623ms
-	BeginReloadAssembly (241ms)
+- Finished resetting the current domain, in  0.237 seconds
+Domain Reload Profiling: 576ms
+	BeginReloadAssembly (197ms)
 		DisableScriptedObjects (4ms)
-		CreateAndSetChildDomain (18ms)
+		CreateAndSetChildDomain (19ms)
 	RebuildCommonClasses (24ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (37ms)
-	LoadAllAssembliesAndSetupDomain (79ms)
-		LoadAssemblies (132ms)
-		AnalyzeDomain (10ms)
-			TypeCache.Refresh (8ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (76ms)
+		LoadAssemblies (128ms)
+		AnalyzeDomain (9ms)
+			TypeCache.Refresh (7ms)
 				TypeCache.ScanAssembly (4ms)
-	FinalizeReload (235ms)
+	FinalizeReload (238ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (62ms)
-			ProcessInitializeOnLoadAttributes (62ms)
-			ProcessInitializeOnLoadMethodAttributes (26ms)
+			BeforeProcessingInitializeOnLoad (61ms)
+			ProcessInitializeOnLoadAttributes (65ms)
+			ProcessInitializeOnLoadMethodAttributes (28ms)
 			AfterProcessingInitializeOnLoad (4ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
 Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 110 unused Assets / (32.3 KB). Loaded Objects now: 711.
-Memory consumption went from 66.4 MB to 66.4 MB.
-Total: 2.495300 ms (FindLiveObjects: 0.033000 ms CreateObjectMapping: 0.006100 ms MarkObjects: 2.390300 ms  DeleteObjects: 0.064400 ms)
+Unloading 110 unused Assets / (32.1 KB). Loaded Objects now: 711.
+Memory consumption went from 68.3 MB to 68.3 MB.
+Total: 2.517500 ms (FindLiveObjects: 0.033300 ms CreateObjectMapping: 0.006600 ms MarkObjects: 2.381200 ms  DeleteObjects: 0.094300 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 71107.172296 seconds.
-  path: Assets/Scripts/Player Movement.cs
-  importAddress: Guid(bc7c38d9d10404541a6b0fd5f0d427bb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Scripts/Player Movement.cs using Guid(bc7c38d9d10404541a6b0fd5f0d427bb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd526da84bef1399355bd373d356b7ba5') in 0.0639978 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=87e47a028fca531ad36060a885ef64f5 DependenciesID=555d68c036fccc2ad135c8235b41f11b StaticDependenciesID=f72a54d6c03359f5aaed2895e1012426 
+  Time since last request: 76527.424564 seconds.
+  path: Assets/Scripts/Timeswap.cs
+  importAddress: Guid(5e0b37e9aff9bfd4e8634d6577100e7b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/Timeswap.cs using Guid(5e0b37e9aff9bfd4e8634d6577100e7b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '61d515dbc26f9305bdb522d88cc6c5e3') in 0.067102 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=be87df55b175e1b7dcc82d010d83aa99 DependenciesID=e20e43590bab283c70075b1931ab817a StaticDependenciesID=ea9e9f7451980c91c5953c1ea6e1f435 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.234 seconds
-Domain Reload Profiling: 479ms
-	BeginReloadAssembly (115ms)
-		DisableScriptedObjects (3ms)
-		CreateAndSetChildDomain (17ms)
-	RebuildCommonClasses (24ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (27ms)
-	LoadAllAssembliesAndSetupDomain (70ms)
-		LoadAssemblies (125ms)
-		AnalyzeDomain (8ms)
-			TypeCache.Refresh (3ms)
-			BuildScriptInfoCaches (4ms)
-	FinalizeReload (235ms)
-		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (60ms)
-			ProcessInitializeOnLoadAttributes (64ms)
-			ProcessInitializeOnLoadMethodAttributes (30ms)
-			AfterProcessingInitializeOnLoad (4ms)
-		AwakeInstancesAfterBackupRestoration (4ms)
-Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 108 unused Assets / (3.1 KB). Loaded Objects now: 713.
-Memory consumption went from 67.0 MB to 67.0 MB.
-Total: 2.238900 ms (FindLiveObjects: 0.029600 ms CreateObjectMapping: 0.005900 ms MarkObjects: 2.174400 ms  DeleteObjects: 0.028300 ms)
-
-Prepare: number of updated asset objects reloaded= 0

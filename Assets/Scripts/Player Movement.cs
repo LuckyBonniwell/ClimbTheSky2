@@ -10,12 +10,13 @@ public class PlayerMovement : MonoBehaviour
     
     private Rigidbody TheRigidiestOfBodiesBro;
 
-    private bool IsNightform = false;
+    public static PlayerMovement Player;
     
     
     void Start()
     {
         TheRigidiestOfBodiesBro = gameObject.GetComponent<Rigidbody>();
+        Player = gameObject.GetComponent<PlayerMovement>();
     }
 
     void Update()
@@ -29,10 +30,22 @@ public class PlayerMovement : MonoBehaviour
             TheRigidiestOfBodiesBro.linearVelocity -= new Vector3(MovementSpeed*Time.deltaTime, 0);
         }
         
-        if (Input.GetKey(KeyCode.Space) && !IsNightform && MovementState != 2)
+        if (Input.GetKey(KeyCode.Space) && Timeswap.IsDay && MovementState != 2)
         {
             TheRigidiestOfBodiesBro.linearVelocity += new Vector3(0, JumpImpulse, 0);
             MovementState = 2;
+        }
+    }
+
+    public void Sundial() // For all functions involving the timeswap mechanic, try to use the same name for the function
+    {
+        if (Timeswap.IsDay)
+        {
+            MovementSpeed = MovementSpeed * 1.5f;
+        }
+        else
+        {
+            MovementSpeed = MovementSpeed / 1.5f;
         }
     }
 }
