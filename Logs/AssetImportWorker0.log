@@ -1,0 +1,230 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-7N2q-z97xVxiJNXB5Z_X4" at "2026-09-27T21:51:42.8538806Z"
+Built from '6000.4/staging' branch; Version is '6000.4.1f1 (8535861f39e1) revision 8729990'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) Core' Language: 'en' Physical Memory: 32486 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-09-27T21:51:42Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.4.1f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/rtayl/OneDrive/Documents/GitHub/ClimbTheSky2
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50563
+-licensingIpc
+LicenseClient-7N2q-z97xVxiJNXB5Z_X4
+-force-d3d12
+-job-worker-count
+15
+-background-job-worker-count
+8
+-gc-helper-count
+1
+-name
+AssetImport
+Successfully changed project path to: C:/Users/rtayl/OneDrive/Documents/GitHub/ClimbTheSky2
+C:/Users/rtayl/OneDrive/Documents/GitHub/ClimbTheSky2
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [10216]  Target information:
+
+Player connection [10216]  * "[IP] 10.0.0.116 [Port] 0 [Flags] 2 [Guid] 3528526804 [EditorId] 3528526804 [Version] 1048832 [Id] WindowsEditor(7,Onyx) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [10216] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [10216] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 15
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.4.1f1 (8535861f39e1)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/rtayl/OneDrive/Documents/GitHub/ClimbTheSky2/Assets
+Forcing GfxDevice: Direct3D 12
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        NVIDIA GeForce RTX 4070 (ID=0x2786)
+    Vendor:          NVIDIA
+    VRAM:            12010 MB
+    App VRAM Budget: 11242 MB
+    Driver:          32.0.16.1714
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56740
+CodeReloadManager initialized
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-7N2q-z97xVxiJNXB5Z_X4"
+[Licensing::IpcConnector] LicenseClient-7N2q-z97xVxiJNXB5Z_X4 channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-rtayl-6000.4.1" at "2026-09-27T21:51:44.0296438Z"
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002427 seconds.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.465 seconds
+Domain Reload Profiling: 980ms
+	BeginReloadAssembly (141ms)
+	RebuildCommonClasses (51ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (77ms)
+	LoadAllAssembliesAndSetupDomain (229ms)
+		LoadAssemblies (137ms)
+		AnalyzeDomain (219ms)
+			TypeCache.Refresh (218ms)
+				TypeCache.ScanAssembly (204ms)
+	FinalizeReload (466ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (55ms)
+			BeforeProcessingInitializeOnLoad (99ms)
+			ProcessInitializeOnLoadAttributes (136ms)
+			ProcessInitializeOnLoadMethodAttributes (98ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              f5db74409a9a42728bf428087add6553
+  Correlation Id:          35a276e1fa6fc88060faa4e12fd65caf
+  External correlation Id: 6633382476598881998
+  Machine Id:              I4jEhnL+NkHjBY0+fmhPJQt22q4=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-rtayl-6000.4.1" (connect: 0.00s, validation: 0.00s, handshake: 1.22s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-rtayl-6000.4.1-notifications" at "2026-09-27T21:51:45.249042Z"
+[Licensing::Module] Licensing Background thread has ended after 2.40s
+[Licensing::Module] Licensing is initialized (took 0.23s).
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 1375835698956-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.379 seconds
+Domain Reload Profiling: 1096ms
+	BeginReloadAssembly (428ms)
+		DisableScriptedObjects (7ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (45ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (72ms)
+	LoadAllAssembliesAndSetupDomain (155ms)
+		LoadAssemblies (232ms)
+		AnalyzeDomain (19ms)
+			TypeCache.Refresh (15ms)
+				TypeCache.ScanAssembly (8ms)
+	FinalizeReload (381ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (105ms)
+			ProcessInitializeOnLoadAttributes (101ms)
+			ProcessInitializeOnLoadMethodAttributes (40ms)
+			AfterProcessingInitializeOnLoad (8ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 110 unused Assets / (32.0 KB). Loaded Objects now: 712.
+Memory consumption went from 68.4 MB to 68.4 MB.
+Total: 3.370600 ms (FindLiveObjects: 0.041700 ms CreateObjectMapping: 0.009000 ms MarkObjects: 3.211600 ms  DeleteObjects: 0.105700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 93918.500672 seconds.
+  path: Assets/Art + Materials/Flap
+  importAddress: Guid(51d016941cc9ffd44824e4def785595f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art + Materials/Flap using Guid(51d016941cc9ffd44824e4def785595f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3236da299b367322bacfd430ad9b3099') in 0.0701309 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a47bddbe1efc12ecbcaa59bf0ce0c023 DependenciesID=73616ed5e9104d5281526ba0a4580bb8 StaticDependenciesID=da1a8c57d801f71ae003e9c19fb2d0a9 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Art + Materials/Jump/Jump-7.png
+  importAddress: Guid(7e428b50b2f3d26498dcbc68e941121d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art + Materials/Jump/Jump-7.png using Guid(7e428b50b2f3d26498dcbc68e941121d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '55e3eed9cdbc3b250ee284c882016937') in 0.0961911 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6267d2df8de4092f9f0297096b36d16f DependenciesID=57be208b510606953e9a24858c88a666 StaticDependenciesID=438f289588d724a9ca85dff215fe8328 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Assets/Art + Materials/Flap/Flap-1.png
+  importAddress: Guid(d876dff2fd218ca45b70c9ebc794e0f5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art + Materials/Flap/Flap-1.png using Guid(d876dff2fd218ca45b70c9ebc794e0f5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5b8874797a3ffaf5ce118c7763de23be') in 0.0180722 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=62843c305cef0040a72c2e41c4371612 DependenciesID=53db3cdecd22bb8cac189e4fc710f0be StaticDependenciesID=729c069142978cba0c58c16e1ab8e584 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/Art + Materials/Jump/Jump-4.png
+  importAddress: Guid(4cdfb55633c915d42ad23bad0857c0a5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art + Materials/Jump/Jump-4.png using Guid(4cdfb55633c915d42ad23bad0857c0a5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e5bfe86a640816390d361fd33b61292a') in 0.0201667 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4d45125abc5cacd510bef5a7912ee94b DependenciesID=089fc485591c1f473b7d1fa20a9629db StaticDependenciesID=acf55b50671263885b9d5908d3389e90 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
