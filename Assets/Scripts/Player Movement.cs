@@ -1,3 +1,4 @@
+using NUnit.Framework.Internal;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -16,6 +17,10 @@ public class PlayerMovement : MonoBehaviour
     public static PlayerMovement Player;
     
     public LayerMask LayerHit;
+
+    public GameObject TestCube;
+    public GameObject TestLeftBound;
+    public GameObject TestRightBound;
     
     
     void Start()
@@ -26,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        TestCube.transform.position = transform.position;
         switch (MovementState)
         {
             case 0:
@@ -63,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (!Timeswap.IsDay)
         {
-            if (Physics.Linecast(new Vector3((transform.position.x - WallStickDistance), transform.position.y), new Vector3((transform.position.x + WallStickDistance), transform.position.y), out RaycastHit hit, LayerHit))
+            if (Physics.Linecast(new Vector3((transform.position.x - WallStickDistance/3), transform.position.y, 0), new Vector3((transform.position.x + WallStickDistance/3), transform.position.y, 0), out RaycastHit hit, LayerHit))
             {
                 if (hit.transform.position.x < transform.position.x)
                 {
@@ -75,7 +81,6 @@ public class PlayerMovement : MonoBehaviour
                     Debug.Log("Wall hit to right");
                     WallDirectionality = 1;
                 }
-                Debug.Log("Linecast hit");
                 MovementState = 3;
             }
         }
@@ -94,7 +99,8 @@ public class PlayerMovement : MonoBehaviour
         }
         if (!Timeswap.IsDay)
         {
-            if (Physics.Linecast(new Vector3((transform.position.x - WallStickDistance), transform.position.y), new Vector3((transform.position.x + WallStickDistance), transform.position.y), LayerHit))
+            Vector3 LineLeftBound = new Vector3((transform.position.x - WallStickDistance/3), transform.position.y, 0);
+            if (Physics.Linecast(LineLeftBound, new Vector3((transform.position.x + WallStickDistance/3), transform.position.y, 0), LayerHit))
             {
                 Debug.Log("Linecast hit");
                 MovementState = 3;
@@ -124,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
                 MovementState = 1;
             }
         }
-        if (!Physics.Linecast(new Vector3((transform.position.x - WallStickDistance), transform.position.y), new Vector3((transform.position.x + WallStickDistance), transform.position.y), LayerHit))
+        if (!Physics.Linecast(new Vector3((transform.position.x - WallStickDistance/3), transform.position.y), new Vector3((transform.position.x + WallStickDistance/3), transform.position.y), LayerHit))
         {
             Debug.Log("Linecast not hit");
             MovementState = 1;
