@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public float MovementSpeed;
     public float JumpImpulse;
     public float WallStickDistance;
+    private int Jumpcount;
 
     private int WallDirectionality = 1; // 1 = Wall is to left, -1 = Wall is to right, for use in wallclimbing
 
