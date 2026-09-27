@@ -9,6 +9,16 @@
     "C:\\Program Files\\Unity\\Hub\\Editor\\6000.4.1f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\BuiltInPackagesCombined.sha1"
   ],
   "outputs": {
+    "com.unity.ide.rider@3.0.40": {
+      "name": "com.unity.ide.rider",
+      "displayName": "JetBrains Rider Editor",
+      "resolvedPath": "C:\\Users\\rtayl\\OneDrive\\Documents\\GitHub\\ClimbTheSky2\\Library\\PackageCache\\com.unity.ide.rider@e4950c6d131b",
+      "fingerprint": "e4950c6d131b925f19dd0b34bdf800110120f8de",
+      "editorCompatibility": "2021.3.0a1",
+      "version": "3.0.40",
+      "source": "registry",
+      "testable": false
+    },
     "com.unity.multiplayer.center@1.0.1": {
       "name": "com.unity.multiplayer.center",
       "displayName": "Multiplayer Center",
@@ -304,6 +314,16 @@
       "displayName": "Hierarchy Core",
       "resolvedPath": "C:\\Users\\rtayl\\OneDrive\\Documents\\GitHub\\ClimbTheSky2\\Library\\PackageCache\\com.unity.modules.hierarchycore",
       "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.ext.nunit@2.0.5": {
+      "name": "com.unity.ext.nunit",
+      "displayName": "Custom NUnit",
+      "resolvedPath": "C:\\Users\\rtayl\\OneDrive\\Documents\\GitHub\\ClimbTheSky2\\Library\\PackageCache\\com.unity.ext.nunit@d8c07649098d",
+      "fingerprint": "d8c07649098d3936da4c8ab500960c1776b44592",
+      "editorCompatibility": "2019.4.0a1",
+      "version": "2.0.5",
       "source": "builtin",
       "testable": false
     }
