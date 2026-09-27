@@ -1,3 +1,4 @@
+using NUnit.Framework.Internal;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -6,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
     public float MovementSpeed;
     public float JumpImpulse;
     public float WallStickDistance;
-    private int Jumpcount;
 
     private int WallDirectionality = 1; // 1 = Wall is to left, -1 = Wall is to right, for use in wallclimbing
 
@@ -17,6 +17,10 @@ public class PlayerMovement : MonoBehaviour
     public static PlayerMovement Player;
     
     public LayerMask LayerHit;
+
+    public GameObject TestCube;
+    public GameObject TestLeftBound;
+    public GameObject TestRightBound;
     
     
     void Start()
@@ -27,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        TestCube.transform.position = transform.position;
         switch (MovementState)
         {
             case 0:
@@ -64,9 +69,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (!Timeswap.IsDay)
         {
-            /*if (Physics.Linecast(new Vector3((transform.position.x - WallStickDistance), transform.position.y), new Vector3((transform.position.x + WallStickDistance), transform.position.y), out RaycastHit hit, LayerHit))
+            if (Physics.Linecast(new Vector3((transform.position.x - WallStickDistance/3), transform.position.y, 0), new Vector3((transform.position.x + WallStickDistance/3), transform.position.y, 0), out RaycastHit hit, LayerHit))
             {
-                
                 if (hit.transform.position.x < transform.position.x)
                 {
                     Debug.Log("Wall hit to left");
@@ -77,23 +81,6 @@ public class PlayerMovement : MonoBehaviour
                     Debug.Log("Wall hit to right");
                     WallDirectionality = 1;
                 }
-                Debug.Log("Linecast hit");
-                MovementState = 3;
-            }*/
-            
-            Ray RonaldRaygun = new Ray(gameObject.transform.position, new Vector3(1, 0, 0));
-            if (Physics.Raycast(RonaldRaygun, WallStickDistance, LayerHit))
-            {
-                Debug.Log("Raycast hit");
-                WallDirectionality = 1;
-                MovementState = 3;
-            }
-            
-            Ray Rayman = new Ray(gameObject.transform.position, new Vector3(-1, 0, 0));
-            if (Physics.Raycast(Rayman, WallStickDistance, LayerHit))
-            {
-                Debug.Log("Raycast hit");
-                WallDirectionality = -1;
                 MovementState = 3;
             }
         }
@@ -112,7 +99,8 @@ public class PlayerMovement : MonoBehaviour
         }
         if (!Timeswap.IsDay)
         {
-            if (Physics.Linecast(new Vector3((transform.position.x - WallStickDistance), transform.position.y), new Vector3((transform.position.x + WallStickDistance), transform.position.y), LayerHit))
+            Vector3 LineLeftBound = new Vector3((transform.position.x - WallStickDistance/3), transform.position.y, 0);
+            if (Physics.Linecast(LineLeftBound, new Vector3((transform.position.x + WallStickDistance/3), transform.position.y, 0), LayerHit))
             {
                 Debug.Log("Linecast hit");
                 MovementState = 3;
@@ -142,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
                 MovementState = 1;
             }
         }
-        if (!Physics.Linecast(new Vector3((transform.position.x - WallStickDistance), transform.position.y), new Vector3((transform.position.x + WallStickDistance), transform.position.y), LayerHit))
+        if (!Physics.Linecast(new Vector3((transform.position.x - WallStickDistance/3), transform.position.y), new Vector3((transform.position.x + WallStickDistance/3), transform.position.y), LayerHit))
         {
             Debug.Log("Linecast not hit");
             MovementState = 1;
