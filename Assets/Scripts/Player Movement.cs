@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public float JumpImpulse;
     public float WallStickDistance;
 
+    private int WallDirectionality = 1; // 1 = Wall is to left, -1 = Wall is to right, for use in wallclimbing
+
     private int MovementState = 0; // 0 = idle, 1 = moving, 2 = aerial | To work with switch statement
     
     private Rigidbody TheRigidiestOfBodiesBro;
@@ -61,8 +63,18 @@ public class PlayerMovement : MonoBehaviour
 
         if (!Timeswap.IsDay)
         {
-            if (Physics.Linecast(new Vector3((transform.position.x - WallStickDistance), 0), new Vector3((transform.position.x + WallStickDistance), 0), LayerHit))
+            if (Physics.Linecast(new Vector3((transform.position.x - WallStickDistance), transform.position.y), new Vector3((transform.position.x + WallStickDistance), transform.position.y), out RaycastHit hit, LayerHit))
             {
+                if (hit.transform.position.x < transform.position.x)
+                {
+                    Debug.Log("Wall hit to left");
+                    WallDirectionality = -1;
+                }
+                else
+                {
+                    Debug.Log("Wall hit to right");
+                    WallDirectionality = 1;
+                }
                 Debug.Log("Linecast hit");
                 MovementState = 3;
             }
@@ -80,14 +92,22 @@ public class PlayerMovement : MonoBehaviour
                 MovementState = 1;
             }
         }
+        if (!Timeswap.IsDay)
+        {
+            if (Physics.Linecast(new Vector3((transform.position.x - WallStickDistance), transform.position.y), new Vector3((transform.position.x + WallStickDistance), transform.position.y), LayerHit))
+            {
+                Debug.Log("Linecast hit");
+                MovementState = 3;
+            }
+        }
     }
 
     private void Wallrun()
     {
         if (Input.GetKey(KeyCode.D))
         {
-            TheRigidiestOfBodiesBro.linearVelocity += new Vector3(0, MovementSpeed*Time.deltaTime);
-            Ray RonaldRaygun = new Ray(gameObject.transform.position, new Vector3(0, 1, 0));
+            TheRigidiestOfBodiesBro.linearVelocity += new Vector3(0, MovementSpeed*Time.deltaTime*WallDirectionality);
+            Ray RonaldRaygun = new Ray(gameObject.transform.position, new Vector3(0, 1*WallDirectionality, 0));
             if (Physics.Raycast(RonaldRaygun, 1.05f, LayerHit))
             {
                 Debug.Log("Raycast hit");
@@ -96,13 +116,18 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.A))
         {
-            TheRigidiestOfBodiesBro.linearVelocity -= new Vector3(0, MovementSpeed*Time.deltaTime);
-            Ray RonaldRaygun = new Ray(gameObject.transform.position, new Vector3(0, -1, 0));
+            TheRigidiestOfBodiesBro.linearVelocity -= new Vector3(0, MovementSpeed*Time.deltaTime*WallDirectionality);
+            Ray RonaldRaygun = new Ray(gameObject.transform.position, new Vector3(0, -1*WallDirectionality, 0));
             if (Physics.Raycast(RonaldRaygun, 1.05f, LayerHit))
             {
                 Debug.Log("Raycast hit");
                 MovementState = 1;
             }
+        }
+        if (!Physics.Linecast(new Vector3((transform.position.x - WallStickDistance), transform.position.y), new Vector3((transform.position.x + WallStickDistance), transform.position.y), LayerHit))
+        {
+            Debug.Log("Linecast not hit");
+            MovementState = 1;
         }
     }
 
