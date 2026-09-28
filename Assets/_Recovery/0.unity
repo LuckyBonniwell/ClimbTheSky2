@@ -538,7 +538,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.06, z: 1}
+  m_LocalScale: {x: 0.06, y: 0.07, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1279524346}
@@ -558,7 +558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   MovementSpeed: 15
   JumpImpulse: 7.5
-  WallStickDistance: 5
+  WallStickDistance: 6.51
   LayerHit:
     serializedVersion: 2
     m_Bits: 8
@@ -843,7 +843,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.0600414
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

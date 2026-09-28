@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
 
     private int MovementState = 0; // 0 = idle, 1 = moving, 2 = aerial | To work with switch statement
     private bool DidSwapMovementStateThisFrame = true;
+
+    //public static bool IsDay = true;
     
     private Rigidbody TheRigidiestOfBodiesBro;
     
@@ -54,9 +56,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void StandardMovement()
     {
-        if (DidSwapMovementStateThisFrame) // Do each time the animation changes
+        if (DidSwapMovementStateThisFrame && Timeswap.IsDay) // Do each time the animation changes
         {
             animator.Play("Day walk anim");
+        }
+        if (DidSwapMovementStateThisFrame && Timeswap.IsDay == false) // Do each time the animation changes
+        {
+            animator.Play("Night Walk Anim");
         }
         if (Input.GetKey(KeyCode.D))
         {
@@ -73,7 +79,17 @@ public class PlayerMovement : MonoBehaviour
             MovementState = 2;
             DidSwapMovementStateThisFrame = true;
         }
-        
+        float moveX = Input.GetAxis("Horizontal");
+    
+        // Flip sprite based on movement direction
+        if (moveX > 0.01f)
+        {
+            GetComponent<SpriteRenderer>().flipX = true; // Face Right
+        }
+        else if (moveX < -0.01f)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;  // Face Left
+        }
         if (!Timeswap.IsDay)
         {
             /*if (Physics.Linecast(new Vector3((transform.position.x - WallStickDistance), transform.position.y, 0), new Vector3((transform.position.x + WallStickDistance), transform.position.y, 0), out RaycastHit hit, LayerHit))
@@ -111,7 +127,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (TheRigidiestOfBodiesBro.linearVelocity.x <= .01 && TheRigidiestOfBodiesBro.linearVelocity.x >= -.01)
         {
-            animator.Play("Day Idle anim");
+            if (Timeswap.IsDay)
+            {
+                animator.Play("Day Idle anim");
+            }
+            else
+            {
+                animator.Play("Night Idle Anim");
+            }
         }
         else
         {
