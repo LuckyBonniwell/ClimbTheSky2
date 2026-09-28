@@ -1,3 +1,4 @@
+using System.Reflection;
 using NUnit.Framework.Internal;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -21,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject TestCube;
     public GameObject TestLeftBound;
     public GameObject TestRightBound;
+
+    private Animator animator;
     
     
     void Start()
@@ -37,9 +40,11 @@ public class PlayerMovement : MonoBehaviour
             case 0:
                 StandardMovement();
                 // Idle animate
+                
                 break;
             case 1:
                 StandardMovement();
+                
                 break;
             case 2:
                 AerialCheck();
@@ -47,6 +52,14 @@ public class PlayerMovement : MonoBehaviour
             case 3:
                 Wallrun();
                 break;
+        }
+        if (MovementSpeed == 0)
+        {
+            animator.SetFloat("speed", 0);
+        }
+        if (MovementSpeed > 0)
+        {
+            animator.SetFloat("speed", 1);
         }
     }
 
