@@ -12,17 +12,14 @@ public class PlayerMovement : MonoBehaviour
     private int WallDirectionality = 1; // 1 = Wall is to left, -1 = Wall is to right, for use in wallclimbing
 
     private int MovementState = 0; // 0 = idle, 1 = moving, 2 = aerial | To work with switch statement
+    private bool DidSwapMovementStateThisFrame = true;
     
     private Rigidbody TheRigidiestOfBodiesBro;
     
     public static PlayerMovement Player;
     
     public LayerMask LayerHit;
-
-    public GameObject TestCube;
-    public GameObject TestLeftBound;
-    public GameObject TestRightBound;
-
+    
     private Animator animator;
     
     
@@ -30,11 +27,11 @@ public class PlayerMovement : MonoBehaviour
     {
         TheRigidiestOfBodiesBro = gameObject.GetComponent<Rigidbody>();
         Player = gameObject.GetComponent<PlayerMovement>();
+        animator = gameObject.GetComponent<Animator>(); // You also needed to get a valid reference to the animator component
     }
 
     void Update()
     {
-        TestCube.transform.position = transform.position;
         switch (MovementState)
         {
             case 0:
@@ -53,18 +50,14 @@ public class PlayerMovement : MonoBehaviour
                 Wallrun();
                 break;
         }
-        if (MovementSpeed == 0)
-        {
-            animator.SetFloat("speed", 0);
-        }
-        if (MovementSpeed > 0)
-        {
-            animator.SetFloat("speed", 1);
-        }
     }
 
     private void StandardMovement()
     {
+        if (DidSwapMovementStateThisFrame) // Do each time the animation changes
+        {
+            animator.Play("Day walk anim");
+        }
         if (Input.GetKey(KeyCode.D))
         {
             TheRigidiestOfBodiesBro.linearVelocity += new Vector3(MovementSpeed*Time.deltaTime, 0);
@@ -78,8 +71,9 @@ public class PlayerMovement : MonoBehaviour
         {
             TheRigidiestOfBodiesBro.linearVelocity += new Vector3(0, JumpImpulse, 0);
             MovementState = 2;
+            DidSwapMovementStateThisFrame = true;
         }
-
+        
         if (!Timeswap.IsDay)
         {
             /*if (Physics.Linecast(new Vector3((transform.position.x - WallStickDistance), transform.position.y, 0), new Vector3((transform.position.x + WallStickDistance), transform.position.y, 0), out RaycastHit hit, LayerHit))
@@ -102,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("Wall hit to left");
                 WallDirectionality = -1;
                 MovementState = 3;
+                DidSwapMovementStateThisFrame = true;
             }
             
             Ray RightRay = new Ray(gameObject.transform.position, new Vector3(1, 0, 0));
@@ -110,8 +105,20 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("Wall hit to right");
                 WallDirectionality = 1;
                 MovementState = 3;
+                DidSwapMovementStateThisFrame = true;
             }
         }
+
+        if (TheRigidiestOfBodiesBro.linearVelocity.x <= .01 && TheRigidiestOfBodiesBro.linearVelocity.x >= -.01)
+        {
+            animator.Play("Day Idle anim");
+        }
+        else
+        {
+            DidSwapMovementStateThisFrame = true;
+            return;
+        }
+        DidSwapMovementStateThisFrame = false;
     }
 
     private void AerialCheck()
@@ -123,6 +130,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 Debug.Log("Raycast hit");
                 MovementState = 1;
+                DidSwapMovementStateThisFrame = true;
             }
         }
         if (!Timeswap.IsDay)
@@ -132,6 +140,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 Debug.Log("Linecast hit");
                 MovementState = 3;
+                DidSwapMovementStateThisFrame = true;
             }
         }
     }
@@ -146,6 +155,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 Debug.Log("Raycast hit");
                 MovementState = 1;
+                DidSwapMovementStateThisFrame = true;
             }
         }
         if (Input.GetKey(KeyCode.A))
@@ -156,12 +166,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 Debug.Log("Raycast hit");
                 MovementState = 1;
+                DidSwapMovementStateThisFrame = true;
             }
         }
         if (!Physics.Linecast(new Vector3((transform.position.x - WallStickDistance/3), transform.position.y), new Vector3((transform.position.x + WallStickDistance/3), transform.position.y), LayerHit))
         {
             Debug.Log("Linecast not hit");
             MovementState = 1;
+            DidSwapMovementStateThisFrame = true;
         }
     }
 
@@ -177,6 +189,7 @@ public class PlayerMovement : MonoBehaviour
             if (MovementState == 3)
             {
                 MovementState = 2;
+                DidSwapMovementStateThisFrame = true;
             }
         }
     }

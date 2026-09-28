@@ -562,9 +562,6 @@ MonoBehaviour:
   LayerHit:
     serializedVersion: 2
     m_Bits: 8
-  TestCube: {fileID: 0}
-  TestLeftBound: {fileID: 0}
-  TestRightBound: {fileID: 0}
 --- !u!54 &903106009
 Rigidbody:
   m_ObjectHideFlags: 0
