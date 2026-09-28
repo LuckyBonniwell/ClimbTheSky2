@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (!Timeswap.IsDay)
         {
-            if (Physics.Linecast(new Vector3((transform.position.x - WallStickDistance/3), transform.position.y, 0), new Vector3((transform.position.x + WallStickDistance/3), transform.position.y, 0), out RaycastHit hit, LayerHit))
+            /*if (Physics.Linecast(new Vector3((transform.position.x - WallStickDistance), transform.position.y, 0), new Vector3((transform.position.x + WallStickDistance), transform.position.y, 0), out RaycastHit hit, LayerHit))
             {
                 if (hit.transform.position.x < transform.position.x)
                 {
@@ -81,6 +81,21 @@ public class PlayerMovement : MonoBehaviour
                     Debug.Log("Wall hit to right");
                     WallDirectionality = 1;
                 }
+                MovementState = 3;
+            }*/
+            Ray LeftRay = new Ray(gameObject.transform.position, new Vector3(-1, 0, 0));
+            if (Physics.Raycast(LeftRay, WallStickDistance,  LayerHit))
+            {
+                Debug.Log("Wall hit to left");
+                WallDirectionality = -1;
+                MovementState = 3;
+            }
+            
+            Ray RightRay = new Ray(gameObject.transform.position, new Vector3(1, 0, 0));
+            if (Physics.Raycast(RightRay, WallStickDistance, LayerHit))
+            {
+                Debug.Log("Wall hit to right");
+                WallDirectionality = 1;
                 MovementState = 3;
             }
         }
