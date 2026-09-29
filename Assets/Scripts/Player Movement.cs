@@ -64,22 +64,18 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.Play("Night Walk Anim");
         }
-        if (Input.GetKey(KeyCode.D))
-        {
-            TheRigidiestOfBodiesBro.linearVelocity += new Vector3(MovementSpeed*Time.deltaTime, 0);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            TheRigidiestOfBodiesBro.linearVelocity -= new Vector3(MovementSpeed*Time.deltaTime, 0);
-        }
+        
+        float moveX = Input.GetAxis("Horizontal");
+        
+        TheRigidiestOfBodiesBro.linearVelocity = new Vector3(moveX * MovementSpeed, TheRigidiestOfBodiesBro.linearVelocity.y, 0);
         
         if (Input.GetKey(KeyCode.Space) && Timeswap.IsDay && MovementState != 2)
         {
             TheRigidiestOfBodiesBro.linearVelocity += new Vector3(0, JumpImpulse, 0);
             MovementState = 2;
             DidSwapMovementStateThisFrame = true;
+            animator.Play("dayjump");
         }
-        float moveX = Input.GetAxis("Horizontal");
     
         // Flip sprite based on movement direction
         if (moveX > 0.01f)
